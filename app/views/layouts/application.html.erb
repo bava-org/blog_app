@@ -10,18 +10,18 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <div class="row">
       <div class="col-md-12">
-        <%=render 'navbar'%>
+        <%=render 'posts/navbar'%>
       </div>
     </div>
     <div class="row">
       <div class="col-md-4">
-        <%=render 'sidebar'%>
+        <%=render 'posts/sidebar'%>
       </div>
       <div class="col-md-8">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
         <%= yield %>
       </div>
     </div>
