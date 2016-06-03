@@ -1,0 +1,14 @@
+<%=form_for(post) do |f| %>
+  <div class="col-md-8">
+    <div class="form-group">
+      <%=f.text_field :title, required: true, class: 'form-control', placeholder: 'enter title'%>
+    </div>
+    <div class="form-group">
+      <%=f.label 'enter the content'%>
+      <%=f.text_area :body, required: true, class: 'form-control'%>
+    </div>
+    <div class="form-group">
+      <%= f.submit class: "btn btn-default"%>
+    </div>
+  </div>
+<% end %>
