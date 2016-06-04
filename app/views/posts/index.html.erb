@@ -4,6 +4,7 @@
   <strong><%=post.title%></strong>
   <%=time_ago_in_words(post.created_at)%> ago
 </p>
+<p><%=post.comments.count%> comments</p>
 <%=link_to 'read post', post_path(post), class: 'btn btn-default'%>
 <%=link_to 'update post', edit_post_path(post), class: 'btn btn-default'%>
 <% end %>
