@@ -1,1 +1,4 @@
-<%=form_for()
+<%= simple_form_for [@post, Comment.new] do |f| %>
+    <%= f.text_field :description, class: "form_control" %>
+    <%= f.button :submit, class: 'btn btn-primary'%>
+<% end %>

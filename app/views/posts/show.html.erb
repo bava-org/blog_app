@@ -5,6 +5,14 @@
       <p><%=@post.title%></p>
       <%=@post.body%>
       <%=link_to 'delete this post', post_path(@post),method: :delete %>
+      <%if @post.comments.any?%>
+      <h4>comments</h4>
+        <%@post.comments.each do |comment| %>
+          <p><%=comment.description%></p>
+        <% end %>
+      <% end -%>
+
+      <%= render 'comments/form'%>
     </div>
   </div>
 </div>

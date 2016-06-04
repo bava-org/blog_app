@@ -27,7 +27,8 @@
       </a>
     </li>
   </ul>
-  <a href='#' id='logout-icon' title='Logout'>
+  <%=link_to 'log out', destroy_user_session_path, method: :delete%> 
+  <!-- <a href='#' id='logout-icon' title='Logout'>
     <span class='glyphicon glyphicon-off'></span>
-  </a>
+  </a> -->
 </nav>
