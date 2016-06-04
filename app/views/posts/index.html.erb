@@ -2,7 +2,7 @@
 <%@posts.each do |post|%>
 <p>
   <strong><%=post.title%></strong>
-  <%=time_ago_in_words(post.created_at)%> ago
+  <%=time_ago_in_words(post.created_at)%> ago by <%#=post.user.email%>
 </p>
 <p><%=post.comments.count%> comments</p>
 <%=link_to 'read post', post_path(post), class: 'btn btn-default'%>
