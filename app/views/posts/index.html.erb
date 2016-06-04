@@ -1,10 +1,12 @@
-<h3>posts</h3>
-<%@posts.each do |post|%>
-<p>
-  <strong><%=post.title%></strong>
-  <%=time_ago_in_words(post.created_at)%> ago by <%#=post.user.email%>
-</p>
-<p><%=post.comments.count%> comments</p>
-<%=link_to 'read post', post_path(post), class: 'btn btn-default'%>
-<%=link_to 'update post', edit_post_path(post), class: 'btn btn-default'%>
-<% end %>
+<div class="font_family">
+  <h3>posts</h3>
+  <%@posts.each do |post|%>
+  <p>
+    <strong><%=post.title%></strong>
+    <%=time_ago_in_words(post.created_at)%> ago by <%#=post.user.email%>
+  </p>
+  <p><%=post.comments.count%> comments</p>
+  <%=link_to 'read post', post_path(post), class: 'btn btn-default'%>
+  <%=link_to 'update post', edit_post_path(post), class: 'btn btn-default'%>
+  <% end %>
+</div>
